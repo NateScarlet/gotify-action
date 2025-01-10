@@ -1,0 +1,23 @@
+name: 'gotify action'
+description: 'send build result to gotify'
+author: 'NateScarlet'
+
+# Add your action's branding here. This will appear on the GitHub Marketplace.
+branding:
+  icon: 'send'
+  color: 'blue'
+
+# Define your inputs here.
+inputs:
+  result:
+    description: 'build result (e.g. `{{ $needs.build.result }}`)'
+    required: true
+  url:
+    description: 'gotify server url`'
+    required: true
+  token:
+    description: 'gotify token'
+    required: true
+runs:
+  using: node20
+  main: dist/index.js
