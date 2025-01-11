@@ -18,6 +18,10 @@ inputs:
   token:
     description: 'gotify token'
     required: true
+  commit-message:
+    description: 'commit message'
+    required: false
+    default: '${{ github.event.head_commit.message }}'
 runs:
   using: node20
   main: dist/index.js
