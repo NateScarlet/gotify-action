@@ -15,7 +15,7 @@ export async function run() {
       '/' +
       process.env['GITHUB_REPOSITORY'] +
       '/actions/runs/' +
-      process.env['GITHUB_RUN_NUMBER']
+      process.env['GITHUB_RUN_ID']
 
     let statusMessage = ''
     let priority = 0
